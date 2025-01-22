@@ -1,6 +1,6 @@
 name: enhance_bloc_state
 description: "A package to generate helper extensions for Bloc, Cubit, and custom state management. It provides a configurable class, `BlocStateGen`, with options to generate the `match` and `matchSome` methods, along with a `log` method, based on the specified flags."
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/azharbinanwar/enhance_bloc_state
 
 environment:
