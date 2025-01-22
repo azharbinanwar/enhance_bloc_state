@@ -30,7 +30,7 @@ A powerful Dart package that generates convenient extensions for BLoC/Cubit stat
      build_runner: ^latest_version
    ```
 
-2. Update your main cubit class to include the generated file and add annotation `@BlocStateGen()`
+2. Update your main cubit class to include the generated file and add annotation `@EnhanceBlocState()`
 
    ```dart
    import 'package:flutter_bloc/flutter_bloc.dart';
@@ -39,7 +39,7 @@ A powerful Dart package that generates convenient extensions for BLoC/Cubit stat
    part 'search_state.dart';
    part 'search_cubit.s.dart';
 
-   @BlocStateGen()
+   @EnhanceBlocState()
    class SearchCubit extends Cubit<SearchState> {
      SearchCubit() : super(const SearchInitial());
    }
@@ -110,10 +110,10 @@ void debugState(CounterState state) {
 
 ### Customizing Generation
 
-You can selectively enable/disable features using the `@BlocStateGen` annotation:
+You can selectively enable/disable features using the `@EnhanceBlocState` annotation:
 
 ```dart
-@BlocStateGen(
+@EnhanceBlocState(
    map: true,      // Enable complete pattern matching
    mapSome: true,  // Enable partial pattern matching
    log: true,        // Enable logging functionality
