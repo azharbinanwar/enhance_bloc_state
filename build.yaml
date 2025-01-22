@@ -1,0 +1,13 @@
+targets:
+  $default:
+    builders:
+      enhance_bloc_state:
+        enabled: true
+
+builders:
+  enhance_bloc_state:
+    import: "package:enhance_bloc_state/enhance_bloc_state_builder.dart"
+    builder_factories: [ "enhanceBlocStateBuilder" ]
+    build_extensions: { ".dart": [ ".s.dart" ] }
+    auto_apply: dependents
+    build_to: source
